@@ -137,7 +137,7 @@ h6 {
   padding-right: 30px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1599px) {
   #header {
     left: -300px;
   }
@@ -279,7 +279,7 @@ h6 {
 
 #hero p span {
   color: #fff;
-  padding-bottom: 4px;
+  padding-bottom: 1px;
   letter-spacing: 1px;
   border-bottom: 3px solid #dd2814;
 }
@@ -378,59 +378,9 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Facts
---------------------------------------------------------------*/
-.facts {
-  padding-bottom: 30px;
-}
-
-.facts .count-box {
-  padding: 30px;
-  width: 100%;
-}
-
-.facts .count-box i {
-  display: block;
-  font-size: 44px;
-  color: #dd2814;
-  float: left;
-  line-height: 0;
-}
-
-.facts .count-box span {
-  font-size: 48px;
-  line-height: 40px;
-  display: block;
-  font-weight: 700;
-  color: #180505;
-  margin-left: 60px;
-}
-
-.facts .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  color: #571212;
-}
-
-.facts .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  color: #571212;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  transition: ease-in-out 0.3s;
-}
-
-.facts .count-box a:hover {
-  color: #dd2814;
-}
 
 /*--------------------------------------------------------------
-# Skills
+# Skills / Habilidades
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -467,7 +417,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Resume
+# Resume / Curiculum Vitae
 --------------------------------------------------------------*/
 .resume .resume-title {
   font-size: 26px;
@@ -528,7 +478,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Testimonials
+# Testimonials /Referencias
 --------------------------------------------------------------*/
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -620,10 +570,10 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Contact
+# Contact / Contacto
 --------------------------------------------------------------*/
 .contact {
-  padding-bottom: 130px;
+  padding-bottom: 70px;
 }
 
 .contact .info {
@@ -697,16 +647,6 @@ section {
   color: #fff;
 }
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -736,7 +676,7 @@ section {
   color:#dd1414
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1599px) {
   #footer {
     position: static;
     width: auto;
