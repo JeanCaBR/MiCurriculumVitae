@@ -137,9 +137,9 @@ h6 {
   padding-right: 30px;
 }
 
-@media (max-width: 1599px) {
+@media (max-width: 1199px) {
   #header {
-    left: -300px;
+    left: -300px; /*Esconde el encabezado*/
   }
 
   #main {
@@ -150,7 +150,8 @@ h6 {
   .container-fluid {
     padding-left: 12px;
     padding-right: 12px;
-  }
+  }  
+
 }
 
 /*--------------------------------------------------------------
@@ -220,7 +221,7 @@ h6 {
   width: 40px;
   height: 40px;
   display: inline-flex;
-  align-items: center;
+  align-items:center;
   justify-content: center;
   line-height: 0;
   border-radius: 50px;
@@ -232,7 +233,7 @@ h6 {
 }
 
 .mobile-nav-active #header {
-  left: 0;
+  left: auto;
 }
 
 /*--------------------------------------------------------------
@@ -284,9 +285,9 @@ h6 {
   border-bottom: 3px solid #dd2814;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 300px) {/*Estaba en 1024px*/
   #hero {
-    background-attachment: fixed;
+    background-attachment:fixed;
   }
 }
 
@@ -296,10 +297,10 @@ h6 {
     line-height: 36px;
   }
 
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
+}
+@media (min-width: 1199px){
+  #hero h1, #hero p {
+    margin-left: 310px;
   }
 }
 
@@ -676,7 +677,7 @@ section {
   color:#dd1414
 }
 
-@media (max-width: 1599px) {
+@media (max-width: 1199px) {
   #footer {
     position: static;
     width: auto;
