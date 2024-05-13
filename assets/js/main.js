@@ -44,6 +44,8 @@
 
   /**
    * Navbar links active state on scroll
+   * Muestra en el menú header la sección (activa) en la que se está ubicado,
+   * mientras las otras secciones se muestran (inactivas)
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
@@ -64,6 +66,8 @@
 
   /**
    * Scrolls to an element with header offset
+   * Para que al hacer clic en un link del menú header, 
+   * se desplace hasta la sección del documento suavemente.
    */
   const scrollto = (el) => {
     let elementPos = select(el).offsetTop
@@ -75,6 +79,7 @@
 
   /**
    * Back to top button
+   * Activa y desactiva el botón para volver al inicio
    */
   let backtotop = select('.back-to-top')
   if (backtotop) {
@@ -91,6 +96,7 @@
 
   /**
    * Mobile nav toggle
+   * Hace funcional el botón menú que despliega el header
    */
   on('click', '.mobile-nav-toggle', function(e) {
     select('body').classList.toggle('mobile-nav-active')
@@ -99,7 +105,8 @@
   })
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with ofset on links with a class name .scrollto
+   * Quita el header de la vista una vez se pulsa un link
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -116,19 +123,10 @@
     }
   }, true)
 
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
-  });
 
   /**
    * Hero type effect
+   * Efecto de escritura en el Hero
    */
   const typed = select('.typed')
   if (typed) {
@@ -137,14 +135,15 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+      typeSpeed: 40,
+      backSpeed: 20,
+      backDelay: 3000
     });
   }
 
   /**
    * Skills animation
+   * Animación en las barras de porcentajes de las habilidades
    */
   let skilsContent = select('.skills-content');
   if (skilsContent) {
@@ -162,9 +161,10 @@
 
   /**
    * Testimonials slider
+   * Animación que va presentando los comentarios automáticamente
    */
   new Swiper('.testimonials-slider', {
-    speed: 600,
+    speed: 1000,
     loop: true,
     autoplay: {
       delay: 5000,
@@ -173,7 +173,7 @@
     slidesPerView: 'auto',
     pagination: {
       el: '.swiper-pagination',
-      type: 'bullets',
+      type:'bullets',
       clickable: true
     },
     breakpoints: {
@@ -183,7 +183,7 @@
       },
 
       1200: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20
       }
     }
@@ -191,6 +191,7 @@
 
   /**
    * Animation on scroll
+   * Presenta el contendio de las ventanas al hacer scroll
    */
   window.addEventListener('load', () => {
     AOS.init({
